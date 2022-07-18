@@ -1,0 +1,72 @@
+<!--
+3.	Write the following scripts using JavaScript
+	a.	Search a number from a given list of numbers using Binary Search technique.
+-->
+<script>
+	var a=new Array(10);
+	var n=parseInt(prompt("Enter no.of Elements:"));
+	
+	for(var i=0;i<n;i++)  //for(i in a) not working
+		a[i]=parseInt(window.prompt("Enter "+(i+1)+" Element:"));
+
+	 document.write("<h1 align=center>Before Sorting elements are:");
+	for(var i in a)
+		document.write(a[i]+" ");
+		
+	sort();	
+	
+	document.write("<br />After Sorting elements are:");
+	for(var i in a)
+		document.write(a[i]+" ");
+	document.write("</h1>");
+	Binarysearch();
+	
+	
+	function Binarysearch()
+	{
+		ele=parseInt(window.prompt("enter searching element:"));
+		
+		document.write("<h1 align=center>Searching Element is:"+ele);
+		
+		l=0;
+		h=n-1;
+		do
+		{
+			mid=parseInt((l+h)/2);
+			if(a[mid]==ele)
+			{
+				document.write("<br>The given element is found at "+(mid+1)+" position");
+				break;
+			}
+			else if(a[mid]>ele)
+				h=mid-1;
+			else
+				l=mid+1;
+		}
+		while(l<=h);
+		
+		if(l>h)
+		{
+			document.write("<br />The given element is not found</h1>");
+		}
+	
+	}
+	
+	
+	
+	function sort()
+	{
+		for(i in a)//for(var i=0;i<a.length;i++)
+		{
+			for(var j=0;j<a.length-i-1;j++)//for(j in a-i-1) not working
+			{
+				if(a[j]>a[j+1])
+				{
+					temp=a[j];
+					a[j]=a[j+1]; 
+					a[j+1]=temp;
+				}
+			}
+		}
+	}
+</script>

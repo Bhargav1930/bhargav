@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>app</title>
+	
+</head>
+
+ <body onload="alllinks()">
+	<p>hi this is to display all links in a program
+		<table style="border:1px red solid;">
+			<tr> <td><a href="http://www.yahoo.com">yahoo</a></td></br>	</tr>
+			<tr> <td><a href="http://www.google.com">google</a></td></br> </tr>
+			<tr> <td><a href="http://www.gmail.com">gmail</a></td></br> </tr>
+		</table>
+		ending of the program </p>
+	<a href="http://www.gmail.com">gmail</a>
+	<area shape="circle" coords="73,168,32" href="DOM-1.html"> </area>
+
+	<p id="para"> </p>
+
+	<script>
+	function alllinks()
+	{
+		/*var x=document.images;
+		var y=document.anchors;
+		var z=document.forms; */
+
+	  var l=document.links;
+	  var txt = " "
+		for(i=0;i<l.length;i++)
+			txt +=l[i].href + " <br>  "
+		document.getElementById('para').innerHTML = txt
+	}
+	</script>
+ </body>
+</html>

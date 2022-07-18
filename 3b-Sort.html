@@ -1,0 +1,39 @@
+<!--
+3.	Write the following scripts using JavaScript
+b.	Sort given set of numbers using Bubble Sorting technique.
+-->
+<script>
+	var a=new Array(10);
+	var n=parseInt(prompt("Enter no.of Elements:"));
+	
+	for(var i=0;i<n;i++)  //for(i in a) not working
+		a[i]=parseInt(window.prompt("Enter "+(i+1)+" Element:"));
+
+	 document.write("<h1 align=center>Before Sorting elements are:");
+	for(var i in a)
+		document.write(a[i]+" ");
+	document.write("</h1>");
+	
+	for(i in a)//for(var i=0;i<a.length;i++)  --Sorting function
+	{
+		for(var j=0;j<a.length-i-1;j++)//for(j in a-i-1) not working
+		{
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1]; 
+				a[j+1]=temp;
+			}
+		}
+	}	
+	document.write("<h1 align=center>After Sorting elements are:");
+	for(var i in a)
+		document.write(a[i]+" ");
+	document.write("</h1>");
+	
+	
+	
+	
+	
+	
+</script>

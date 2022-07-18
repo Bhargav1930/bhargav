@@ -1,0 +1,24 @@
+<!--
+4.	Write scripts for the following using recursive functions
+a.	Write a function to power which takes two arguments m and n, and returns mn (consider m and n are integers).
+
+-->
+<h1 align="center"> <u>power of a number<br> </u></h1>
+
+<script>
+	var m,n,p=1;
+	m=window.prompt("Enter the value of m",0);
+	n=window.prompt("Enter the value of n",0);
+	power(m,n);
+	
+	function power(m,n)
+	{
+		for(i=1;i<=n;i++)
+		p=p*m;
+	}
+	document.write("<h1 align='center'>")
+	document.write(m+"<sup>"+n+"</sup> = "+p);
+	document.write("</h1>");
+
+</script>
+

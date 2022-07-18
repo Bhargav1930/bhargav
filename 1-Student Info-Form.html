@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Info</title>
+	
+	<link rel="stylesheet"  href="form.css">
+		
+
+	</head>
+	<body>
+		 <form method="post" autocomplete="on">
+          <center>
+		<table align="center" cellspacing=0>
+			<tr>
+				<td class="full" colspan=4 align="center">Student Information</td>
+			</tr>
+			<tr>
+				<td colspan=4 class="full" align="right"><marquee><img src="doll.jpg" width="110" height="110"></marquee></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="regd"><strong>Regd.No</strong></label></td>
+				<td colspan=3 class="last"><input id="regd" type="text" required="true" placeholder="Y18IT066"></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="fname"><strong>Student Name</strong></label></td>
+				<td><input id="fname" type="text" required="true" placeholder="First Name"></td>
+				<td><input id="fname" type="text" required="true" placeholder="Second Name" ></td>
+				<td class="last"><input id="fname" type="text" required="true" placeholder="Last Name"></td>
+			</tr>
+			<tr>
+				<td class="br" ><label for="mail"><strong>E-mail Id</strong></label></td>
+				<td colspan=3 class="last"><input id="mail" type="email" required="true" placeholder="abc@gmail.com"></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="numb"><strong>Mobile Number</strong></label></td>
+				<td colspan=3 class="last"><input id="numb" type="Number" required="true" max=10 placeholder="0123456789"></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="db"><strong>DOB</strong></td>
+				<td class="last" colspan=4><input id="db" type="datetime-local" required="true"></td>
+			</tr>
+			<tr>
+				<td class="br" id="gender"><strong>Gender</strong></td>
+				<td><label for="male"><strong>Male:</strong></label>
+				<input name="gender" id="male" type="radio"></td>
+				<td><label for="female"><strong>Female:</strong></label>
+				<input name="gender" id="female" type="radio"></td>
+				<td class="last"><label for="other"><strong>Other:</strong></label>
+				<input name="gender" id="other" type="radio"></td>
+			</tr>
+			<tr>
+				<td id=hobbies class="br"><strong>Hobbies</strong></td>
+				<td><label for="singing"><strong>singing</strong></label>
+				<input name="hobbies" id="singing" type="checkbox"></td>
+				<td><label for="playing"><strong>playing</strong></label>
+				<input name="hobbies" id="palying" type="checkbox"></td>
+				<td class="last"><label for="Dancing"><strong>Dancing</strong></label>
+				<input name="hobbies" id="Dancing" type="checkbox"></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="web"><strong>Website</strong></label></td>
+				<td colspan=3 class="last"><input id="web" type="url" required="true" placeholder="http://linkedin webpage"></td>
+			</tr>
+			<tr>
+				<td class="br"><label for="address"><strong>Address</strong></label></td>
+				<td colspan=3 class="last"><textarea id="address"  type="textarea" required="true" placeholder="Address"></textarea></td>
+			</tr>
+			<tr>
+			<td class="br"><label for="pin"><strong>Pincode</strong></label></td>
+				<td colspan=3 class="flast"><input id="pin" type="text" required="true" pattern="\d" minlength=5 maxlength="6" placeholder="pincode"></td>
+			</tr>
+		</table>
+	<br>
+		<fieldset>
+    		<legend>Qualification</legend>
+    		<table>
+    			<tr>
+    				<td>Sno</td>
+    				<td style="width:250px">Course</td>
+    				<td>College</td>
+    				<td>Percentage/CGPA</td>
+    				<td>Year of Passing(Month&Year)</td>
+    			</tr>
+    			<tr>
+    				<td label for="school">1</td>
+					<td><label id="school"><strong>SSC</strong></label></td>
+					<td><input id="school" type="text" required="true"></td>
+					<td><input id="school" type="text" required="true" ></td>
+					<td><input id="school" type="text" required="true"></td>
+			    </tr>
+			    <tr>
+    				<td label for="College">2</td>
+					<td><label id="College"><strong>College</strong></label></td>
+					<td><input id="College" type="text" required="true"></td>
+					<td><input id="College" type="text" required="true" ></td>
+					<td><input id="College" type="text" required="true"></td>
+			    </tr>
+			    <tr>
+    				<td label for="Diploma">3</td>
+					<td><label id="Diploma"><strong>Diploma</strong></label></td>
+					<td><input id="Diploma" type="text" required="true"></td>
+					<td><input id="Diploma" type="text" required="true" ></td>
+					<td><input id="Diploma" type="text" required="true"></td>
+			    </tr>
+			    <tr>
+    				<td label for="2year">4</td>
+					<td><label id="2year"><strong>Upto 2nd year</strong></label></td>
+					<td><input id="2year" type="text" required="true"></td>
+					<td><input id="2year" type="text" required="true" ></td>
+					<td><input id="2year" type="text" required="true"></td>
+			    </tr>
+    		</table>
+    	</fieldset>
+	        <button  type="submit" value="Submit">Submit</button>
+             <button  type="reset" value="Reset">Clear</button>
+        </center>
+        </form>
+	</body>
+</html>

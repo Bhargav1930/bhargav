@@ -1,0 +1,33 @@
+<!--
+4.	Write scripts for the following using recursive functions
+b.	finding nth Fibonacci
+-->
+<script language="JAVASCRIPT" type="TEXT/JAVASCRIPT">
+var n,f;
+n=parseInt(window.prompt("Enter a number"));
+document.writeln("<h1>The "+n+" fibonacci numbers are: ");
+
+for(i=0;i<n;i++)
+{
+f=fib(i);
+document.writeln(f+" ");
+}
+document.writeln("</h1>");
+
+
+
+
+function fib(n)
+{
+ if(n==1||n==0)
+  return 1;
+ else
+  return fib(n-1)+fib(n-2);
+}
+
+</script>
+
+
+
+
+

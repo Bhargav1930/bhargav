@@ -1,0 +1,24 @@
+<!--
+4.	Write scripts for the following using recursive functions
+b.	Factorial of a given number
+-->
+<script>
+var n;
+document.write("<table>");
+
+var n;
+n=parseInt(window.prompt("Enter a number"));
+document.writeln("The factorial numbers are<br>");
+
+for(var i=0;i<=n;i++)
+document.write("<tr><td>"+i+"!</td><td>"+factorial(i)+"</td></tr>");
+document.write("</table>");
+
+function factorial(n)
+{
+	if(n<=1)
+		return 1;
+	else
+		return n*factorial(n-1);
+}
+</script>

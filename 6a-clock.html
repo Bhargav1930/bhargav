@@ -1,0 +1,58 @@
+<!--
+6.	Write Scripts for the following events
+a.	Display digital clock using ONLOAD event.
+-->
+
+<head>
+<script>
+function display()
+{
+  var d=new Date()
+  var h=d.getHours()
+  var m=d.getMinutes()
+  var s=d.getSeconds()
+  var t= h+ ":"+ m+ ":" + s
+  //h1txt.innerText=t
+  document.getElementById("h1txt").innerText=t
+}
+
+function start()
+{
+ setInterval("display()",1000)
+  // setInterval() method calls a function or evaluates an expression at specified intervals
+  // 1000 ms = 1 second.
+}
+</script>
+
+</head>
+<body onload="start()">
+<h1 id="h1txt" style="text-align:center"> 00:00:00 </h1>
+
+</body>
+
+
+
+<!--
+<html>
+<head>
+<title>A JavaScript Clock</title>
+
+<script type="text/javascript">
+ function initClock() 
+ {
+  var now = new Date();
+  var hr  = now.getHours();
+  var min = now.getMinutes();
+  var sec = now.getSeconds();
+  if (min < 10) min = "0" + min;  
+  if (sec < 10) sec = "0" + sec;
+  document.getElementById('clockDisplay').innerHTML = "Time is " + hr + ":" + min + ":" + sec;
+  setTimeout('initClock()', 500);
+ }
+</script>
+</head>
+<body onload="initClock()">
+<h1 id="clockDisplay"></h1>
+</body>
+</html> 
+-->

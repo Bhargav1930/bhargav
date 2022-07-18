@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+		<style type="text/css">
+		 .b{
+			border: solid red 1px; 
+			margin:32px; 
+		 }
+		</style>
+
+ </head>
+ <body>
+  <script type="text/javascript">
+	function divclick() 
+	{
+		alert("Clicked in the DIV Tag")
+	}
+	function paraclick() 
+	{
+		alert("Clicked in the paragraph Tag")
+		//event.stopPropagation()   OR 
+		event.cancelBubble=true
+	}
+	function h1click() 
+	{
+		alert("Clicked in the h1 Tag")
+	}
+ </script>
+
+	<div class="b" onclick="divclick()"> Div Tag
+		<p class="b" onclick="paraclick()"> paragraph tag (Bubbling Disable)</p>
+		<h1 class="b" onclick="h1click()">  H1 tag (Bubbling enable)</h1>
+	</div>
+ </body>
+</html>

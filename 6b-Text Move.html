@@ -1,0 +1,24 @@
+<!-- Should execute in Internet Explorer
+-->
+<html>
+
+<head>
+<script type="text/javascript">
+	function mpos()
+	{
+	 X=event.offsetX;
+	 Y=event.offsetY;
+
+	 document.getElementById("h1text").style.left=X;
+	 document.getElementsByTagName('h1')[0].style.top=Y;
+	 
+	 document.getElementsByTagName('h1')[0].innerText=document.getElementById('t1').value
+	}
+</script>
+</head>
+
+<body onmousemove="mpos()">
+	Enter Text <Input type="text" id="t1"/><br>
+	<h1 id="h1text" style="position:relative; color:blue; ">  </h1>
+</body>
+</html>

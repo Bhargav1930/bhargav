@@ -1,0 +1,67 @@
+<!--
+8.	Design a simple web page containing user’s login information. Validate that form by using following conditions.
+i.	Name should be entered.
+ii.	Password must be greater than or equal to 6 characters.
+iii.Ignore the submit event.
+iv.	Prompt the user whether he wants to clear the data or not. If yes then only clear the login information from the text fields.
+-->
+
+<script language="JAVASCRIPT" type="TEXT/JAVASCRIPT">
+
+function validate()
+{
+ //event.returnvalue=false;
+ if(document.f1.t1.value=="")
+ {
+   window.alert("Please enter the username");
+   return false;
+ }
+ else if(document.f1.p1.value=="")
+ {
+   window.alert("Please enter the Password");
+   return false;
+ }
+ else if(document.f1.p1.value.length<6)
+ {
+   window.alert("The password should be minimum 6 characters");
+   return false;
+ }
+ else
+   window.alert("You logged in successfully");
+}
+
+function Clear()
+{
+ v=window.confirm("Do you want to clear the data");
+ if(v)
+ {
+   document.f1.t1.value="";
+   document.f1.p1.value="";
+ }
+ return false;
+}
+
+</script>
+
+<form name="f1" onsubmit="return validate()" onreset="return Clear()">
+ <table>
+  <tr>
+ 	<td>Username :</td>
+	<td><input type="text" name="t1" size="20" /></td>
+  </tr>
+  <tr>
+	<td>Password :</td>
+	<td><input type="password" name="p1" size="20" /></td>
+  </tr>
+  <tr>
+	<td><input type="submit" value="Submit" /></td>
+	  <td><input type="reset" value="Clear" /></td></tr>
+  
+ </table>
+ </form>
+ 
+ 
+
+
+
+
